@@ -7,22 +7,16 @@ public class gameSceneMove : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     
-    private Transform transform;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    private Transform tm;
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + new Vector3(-speed*Time.deltaTime, 0, 0);
+        tm.position = tm.position + new Vector3(-speed*Time.deltaTime, 0, 0);
     }
 
     private void Awake()
     {
-        transform = GetComponent<Transform>();
+        tm = GetComponent<Transform>();
     }
 
 }
