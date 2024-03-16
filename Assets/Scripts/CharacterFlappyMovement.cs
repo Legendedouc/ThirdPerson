@@ -17,8 +17,10 @@ public class CharacterFlappyMovement : MonoBehaviour
     {
         //Set maximum velocity of rigidbody
         if (rb.velocity.magnitude > maxSpeed)
-        {
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        { 
+           
+           rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+          
         }
 
         
@@ -28,7 +30,9 @@ public class CharacterFlappyMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(0, force, 0, fm);
+           // rb.AddForce(0, force, 0, fm);
+            fallSpeed *= -1;
+            Physics.gravity = new Vector3(0, fallSpeed, 0);
         }
     }
 

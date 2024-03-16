@@ -437,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   distancePer: 10
-  obstacle: {fileID: 2327389475718317781, guid: a0744f4b7bf55cb4e8788e0e91b953f3, type: 3}
+  obstacle: {fileID: 940341690}
 --- !u!4 &445133213
 Transform:
   m_ObjectHideFlags: 0
@@ -652,6 +652,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5726228c5ca6b9e4db4e88399ffb420d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &940341690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4286719190612633606, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
+  m_PrefabInstance: {fileID: 6185821420585156133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1107465069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5080244831083389666, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
@@ -955,10 +960,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 445133213}
     m_Modifications:
     - target: {fileID: 2374451220379365901, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374451220379365901, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
       propertyPath: obstacle
       value: 
       objectReference: {fileID: 4286719190612633606, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
     - target: {fileID: 2374451220379365901, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
+      propertyPath: position
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374451220379365901, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374451220379365901, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
+      propertyPath: actualCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3003921522495615641, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -980,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5080244831083389666, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.31
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5080244831083389666, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1015,6 +1036,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5738137795178930501, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738137795178930501, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
       propertyPath: maxDuration
       value: 1.5
       objectReference: {fileID: 0}
@@ -1040,8 +1065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 700
-  maxSpeed: 12
-  fallSpeed: -40
+  maxSpeed: 6
+  fallSpeed: -25
   fm: 5
 --- !u!64 &9214221989174324313
 MeshCollider:
