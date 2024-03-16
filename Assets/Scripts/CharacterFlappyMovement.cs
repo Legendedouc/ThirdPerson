@@ -3,12 +3,13 @@ using UnityEngine;
 public class CharacterFlappyMovement : MonoBehaviour
 {
     private Rigidbody rb;
-    [SerializeField] private float force, maxSpeed;
+    [SerializeField] private float force, maxSpeed,fallSpeed;
     [SerializeField] private ForceMode fm;
 
     // Start is called before the first frame update
     void Start()
     {
+        Physics.gravity = new Vector3(0, fallSpeed, 0);
     }
 
     // Update is called once per frame
@@ -19,6 +20,8 @@ public class CharacterFlappyMovement : MonoBehaviour
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
+
+        
     }
 
     void Update()

@@ -1039,9 +1039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd34ca294913f6d4ba9bd2ec8dd89906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 500
-  maxSpeed: 7
-  fm: 0
+  force: 700
+  maxSpeed: 12
+  fallSpeed: -40
+  fm: 5
 --- !u!64 &9214221989174324313
 MeshCollider:
   m_ObjectHideFlags: 0
