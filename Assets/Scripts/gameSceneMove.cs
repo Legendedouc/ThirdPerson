@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class gameSceneMove : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 5f,distancePer;
 
     private Transform tm;
+    public GameObject obstacle;
+    
 
     // Update is called once per frame
     void Update()

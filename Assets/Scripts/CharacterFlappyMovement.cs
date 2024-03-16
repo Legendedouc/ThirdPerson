@@ -14,11 +14,6 @@ public class CharacterFlappyMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(0, force, 0, fm);
-        }
-
         //Set maximum velocity of rigidbody
         if (rb.velocity.magnitude > maxSpeed)
         {
@@ -26,6 +21,13 @@ public class CharacterFlappyMovement : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(0, force, 0, fm);
+        }
+    }
 
     private void Awake()
     {
