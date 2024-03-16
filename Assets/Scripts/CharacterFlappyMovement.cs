@@ -8,7 +8,7 @@ public class CharacterFlappyMovement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float cooldown=0.5f;
     private float actualCooldown;
-    [SerializeField] private float force;
+    [SerializeField] private float force,maxSpeed;
     [SerializeField] private ForceMode fm;
     
     // Start is called before the first frame update
@@ -22,7 +22,10 @@ public class CharacterFlappyMovement : MonoBehaviour
     {   
         if (Input.GetKeyDown(KeyCode.Space)&&actualCooldown<=0)
         {
+           
             rb.AddForce(0,force,0,fm);
+            Debug.Log(rb.velocity);
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
             reset();
         }
     }
@@ -42,4 +45,6 @@ public class CharacterFlappyMovement : MonoBehaviour
     {
         actualCooldown = cooldown;
     }
+    
+    
 }

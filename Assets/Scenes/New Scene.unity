@@ -596,9 +596,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd34ca294913f6d4ba9bd2ec8dd89906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.25
+  cooldown: 0.05
   force: 11
-  fm: 1
+  maxSpeed: 0
+  fm: 2
 --- !u!65 &1356720581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -695,7 +696,7 @@ Rigidbody:
   m_GameObject: {fileID: 1356720578}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 2.5
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
