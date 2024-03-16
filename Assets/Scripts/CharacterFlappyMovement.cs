@@ -6,8 +6,6 @@ using UnityEngine;
 public class CharacterFlappyMovement : MonoBehaviour
 {
     private Rigidbody rb;
-    [SerializeField] private float cooldown=0.5f;
-    private float actualCooldown;
     [SerializeField] private float force,maxSpeed;
     [SerializeField] private ForceMode fm;
     
@@ -20,14 +18,17 @@ public class CharacterFlappyMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
-        if (Input.GetKeyDown(KeyCode.Space)&&actualCooldown<=0)
+        
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-           
             rb.AddForce(0,force,0,fm);
-            Debug.Log(rb.velocity);
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
-            reset();
         }
+        //Set maximum velocity of rigidbody
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
+        
     }
 
 
@@ -36,15 +37,7 @@ public class CharacterFlappyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
-    {
-        actualCooldown -= Time.deltaTime;
-    }
 
-    void reset()
-    {
-        actualCooldown = cooldown;
-    }
     
     
 }

@@ -597,9 +597,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0.05
-  force: 11
-  maxSpeed: 0
-  fm: 2
+  force: 500
+  maxSpeed: 7
+  fm: 0
 --- !u!65 &1356720581
 BoxCollider:
   m_ObjectHideFlags: 0
