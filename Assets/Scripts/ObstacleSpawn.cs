@@ -9,17 +9,18 @@ using Vector3 = UnityEngine.Vector3;
 public class ObstacleSpawn : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float cooldown = 1f;
-    public float actualCooldown = 1f;
-    public float position;
+    [SerializeField] private float cooldown = 1f;
+    private float actualCooldown = 1f;
+    [SerializeField] private float position;
 
     public GameObject obstacle;
-    // Update is called once per frame
+    public RandomObject randomObstacle;
 
     private void Start()
     {
+        Debug.Log("Hello World");
+        actualCooldown = cooldown;
     }
-
 
     void Update()
     {
@@ -27,10 +28,16 @@ public class ObstacleSpawn : MonoBehaviour
         if (actualCooldown <= 0 && obstacle != null)
         {
             position = Random.Range(-3f, 2.65f);
-            transform.position = new Vector3(transform.parent.position.x, position, 0);
-            Instantiate(obstacle, this.transform.position + Vector3.left * transform.parent.position.x,
+            transform.position = new Vector3(transform.position.x, position, 0);
+            Instantiate(randomObstacle.RandomObstacle(),
+                this.transform.position + Vector3.left * transform.parent.position.x,
                 transform.rotation, transform.parent);
             actualCooldown = cooldown;
         }
+    }
+
+
+    void DestroyAfterSeconds()
+    {
     }
 }
