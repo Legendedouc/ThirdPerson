@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1.75
-  position: 0
+  position: -33
   obstacle: {fileID: 4286719190612633606, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
   randomObstacle: {fileID: 11400000, guid: 19af506e99b4bb042a164905229478ed, type: 2}
 --- !u!1 &521085186

@@ -12,13 +12,12 @@ public class ObstacleSpawn : MonoBehaviour
     [SerializeField] private float cooldown = 1f;
     private float actualCooldown = 1f;
     [SerializeField] private float position;
-
+   
     public GameObject obstacle;
     public RandomObject randomObstacle;
 
     private void Start()
     {
-        Debug.Log("Hello World");
         actualCooldown = cooldown;
     }
 
@@ -34,10 +33,5 @@ public class ObstacleSpawn : MonoBehaviour
                 transform.rotation, transform.parent);
             actualCooldown = cooldown;
         }
-    }
-
-
-    void DestroyAfterSeconds()
-    {
     }
 }
