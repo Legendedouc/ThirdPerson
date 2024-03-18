@@ -3,35 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
 public class ObstacleSpawn : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private float cooldown = 1f;
-    private float actualCooldown = 1f;
-    [SerializeField] private float position;
+    [FormerlySerializedAs("cooldown")] [SerializeField] private float _cooldown = 1f;
+    private float _actualCooldown = 1f;
+    [FormerlySerializedAs("position")] [SerializeField] private float _position;
    
     public GameObject obstacle;
     public RandomObject randomObstacle;
 
     private void Start()
     {
-        actualCooldown = cooldown;
+        _actualCooldown = _cooldown;
     }
 
     void Update()
     {
-        actualCooldown -= Time.deltaTime;
-        if (actualCooldown <= 0 && obstacle != null)
+        _actualCooldown -= Time.deltaTime;
+        if (_actualCooldown <= 0 && obstacle != null)
         {
-            position = Random.Range(-3f, 2.65f);
-            transform.position = new Vector3(transform.position.x, position, 0);
+            _position = Random.Range(-3f, 2.65f);
+            transform.position = new Vector3(transform.position.x, _position, 0);
             Instantiate(randomObstacle.RandomObstacle(),
                 this.transform.position + Vector3.left * transform.parent.position.x,
                 transform.rotation, transform.parent);
-            actualCooldown = cooldown;
+            _actualCooldown = _cooldown;
         }
     }
 }

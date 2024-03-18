@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class gameSceneMove : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f,distancePer;
+    [FormerlySerializedAs("speed")] [SerializeField] private float _speed = 5f;
 
     private Transform tm;
     public GameObject obstacle;
@@ -14,7 +15,7 @@ public class gameSceneMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
+        transform.Translate(new Vector3(-_speed * Time.deltaTime, 0, 0));
     }
 
     private void Awake()

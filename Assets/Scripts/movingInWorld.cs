@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movingInWorld : MonoBehaviour
 {
-    private Vector3 targetPos, startPos;
+    private Vector3 _targetPos, _startPos;
     public float minDuration, maxDuration;
     private float duration;
     private float passedTime, percentageComplete;
@@ -16,17 +16,17 @@ public class movingInWorld : MonoBehaviour
     void Start()
     {
         duration = Random.Range(minDuration, maxDuration);
-        targetPos = transform.position;
-        transform.position = new Vector3(transform.position.x, targetPos.y + height, transform.position.z);
-        startPos = transform.position;
+        _targetPos = transform.position;
+        transform.position = new Vector3(transform.position.x, _targetPos.y + height, transform.position.z);
+        _startPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        startPos.x = transform.position.x;
-        targetPos.x = transform.position.x;
+        _startPos.x = transform.position.x;
+        _targetPos.x = transform.position.x;
         passedTime += Time.deltaTime;
-        transform.position = Vector3.Lerp(startPos, targetPos, passedTime / duration);
+        transform.position = Vector3.Lerp(_startPos, _targetPos, passedTime / duration);
     }
 }
