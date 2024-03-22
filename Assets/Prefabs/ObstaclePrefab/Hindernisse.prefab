@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDuration: 0.1
   maxDuration: 1.5
-  height: -6
+  height: -5
 --- !u!1 &3767680574261076892
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDuration: 0.1
   maxDuration: 1.5
-  height: 6
+  height: 5
 --- !u!1 &4286719190612633606
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5080244831083389666}
-  - component: {fileID: 2374451220379365901}
   m_Layer: 0
   m_Name: Hindernisse
   m_TagString: Untagged
@@ -268,7 +267,7 @@ Transform:
   m_GameObject: {fileID: 4286719190612633606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -276,19 +275,3 @@ Transform:
   - {fileID: 2628134581479389398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2374451220379365901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4286719190612633606}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370341b348a2f8141a8366784907dba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 1
-  actualCooldown: 1
-  position: 0
-  obstacle: {fileID: 0}
