@@ -1,0 +1,22 @@
+.header {
+    font-size: 80px;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-self: center;
+    -unity-text-align: upper-left;
+    color: rgb(255, 254, 254);
+}
+
+.button {
+    width: 380px;
+    height: 150px;
+    align-self: center;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 35px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    -unity-font-style: bold;
+}
