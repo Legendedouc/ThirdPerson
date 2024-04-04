@@ -1,8 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=e700747e9e4de094eb2ac08b0fcd4ce6&amp;type=3#MainMenuStyle" />
-    <ui:VisualElement name="Container" style="flex-grow: 1; -unity-background-image-tint-color: rgb(12, 12, 12); background-color: rgb(27, 27, 27);">
-        <ui:Label tabindex="-1" text="Hauptmenü" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Hauptmenu" class="header" style="margin-top: 130px; -unity-font-style: bold; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
-        <ui:Button text="Fly!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Start" class="button" style="width: 380px; height: 150px; margin-right: 0; margin-left: 0; margin-bottom: 0; padding-right: 0; padding-left: 0; padding-bottom: 0; margin-top: 120px;" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(14, 14, 14); background-image: url(&quot;project://database/Assets/Image/game_hintergrund_mainmenu.png?fileID=21300000&amp;guid=8b104293c75771648ba437f6f7ee6a65&amp;type=3#game_hintergrund_mainmenu&quot;);">
+        <ui:Label tabindex="-1" text="Startrail" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Titel" class="header" style="margin-top: 130px; -unity-font-style: bold; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        <ui:Button text="Fly!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Start" class="button" style="width: 380px; height: 150px; margin-right: 0; margin-left: 0; margin-bottom: 0; padding-right: 0; padding-left: 0; padding-bottom: 0; margin-top: 100px;" />
         <ui:Button text="Beenden" parse-escape-sequences="true" display-tooltip-when-elided="true" view-data-key="Exit" name="Exit" class="button" style="margin-right: 0; margin-bottom: 0; margin-left: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 95px;" />
     </ui:VisualElement>
 </ui:UXML>

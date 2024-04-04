@@ -348,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 340970977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 301.6, y: 0, z: 0}
+  m_LocalPosition: {x: 300, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -435,8 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4874417d6e8aeff45b1c2ce8b4715332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  distancePer: 10
+  _speed: 3
   obstacle: {fileID: 0}
 --- !u!4 &445133213
 Transform:
@@ -604,8 +603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370341b348a2f8141a8366784907dba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1.75
-  position: -33
+  _cooldown: 1.75
+  _position: -33
   obstacle: {fileID: 4286719190612633606, guid: 24ee0e95438ae684f881a187677e6e53, type: 3}
   randomObstacle: {fileID: 11400000, guid: 19af506e99b4bb042a164905229478ed, type: 2}
 --- !u!1 &521085186
@@ -1002,9 +1001,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 700
-  maxSpeed: 6
-  fallSpeed: -25
-  fm: 5
+  _maxSpeed: 6
+  _fallSpeed: -25
+  _fm: 5
 --- !u!64 &9214221989174324313
 MeshCollider:
   m_ObjectHideFlags: 0
