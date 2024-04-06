@@ -24,8 +24,9 @@ public class ObstacleSpawn : MonoBehaviour
 
     void Update()
     {
+        
         _actualCooldown -= Time.deltaTime;
-        if (_actualCooldown <= 0 && obstacle != null)
+        if (_actualCooldown <= 0 && obstacle != null && GameManager.Instance.State!=GameManager.GameState.GameOver )
         {
             _position = Random.Range(-3f, 2.65f);
             transform.position = new Vector3(transform.position.x, _position, 0);

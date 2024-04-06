@@ -36,7 +36,11 @@ GraphicsSettings:
   m_PreloadedShaders: []
   m_PreloadShadersBatchTimeLimit: -1
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+<<<<<<< HEAD
   m_CustomRenderPipeline: {fileID: 11400000, guid: d1ee7b2594afc67488d228f17216b025, type: 2}
+=======
+  m_CustomRenderPipeline: {fileID: 0}
+>>>>>>> 2356b82e2c2160d19248b5084bff11b43e93afc7
   m_TransparencySortMode: 0
   m_TransparencySortAxis: {x: 0, y: 0, z: 1}
   m_DefaultRenderingPath: 1
@@ -56,8 +60,13 @@ GraphicsSettings:
   m_FogKeepExp: 1
   m_FogKeepExp2: 1
   m_AlbedoSwatchInfos: []
+<<<<<<< HEAD
   m_LightsUseLinearIntensity: 1
   m_LightsUseColorTemperature: 1
+=======
+  m_LightsUseLinearIntensity: 0
+  m_LightsUseColorTemperature: 0
+>>>>>>> 2356b82e2c2160d19248b5084bff11b43e93afc7
   m_DefaultRenderingLayerMask: 1
   m_LogWhenShaderIsCompiled: 0
   m_SRPDefaultSettings:
