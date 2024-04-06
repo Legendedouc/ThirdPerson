@@ -8,6 +8,8 @@ public class UIScript : MonoBehaviour
 {
     private UIDocument _document;
     private Button _button;
+
+    [SerializeField] private GameObject _menu, _camera;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +25,10 @@ public class UIScript : MonoBehaviour
 
     private void StartGameClick(ClickEvent evt)
     {
-        SceneManager.LoadScene(1);
+        _menu.SetActive(false);
+        
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        GameManager.Instance.changeGameState(GameManager.GameState.Playing);
+
     }
 }

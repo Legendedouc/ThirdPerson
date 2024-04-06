@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -7,7 +8,7 @@ public class CharacterFlappyMovement : MonoBehaviour
     [SerializeField] private float force;
     [FormerlySerializedAs("maxSpeed")] [SerializeField] private float _maxSpeed;
     [FormerlySerializedAs("fallSpeed")] [SerializeField] private float _fallSpeed;
-    [FormerlySerializedAs("fm")] [SerializeField] private ForceMode _fm;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class CharacterFlappyMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+  
         //Set maximum velocity of rigidbody
         if (rb.velocity.magnitude > _maxSpeed)
         { 
@@ -25,7 +27,7 @@ public class CharacterFlappyMovement : MonoBehaviour
            rb.velocity = Vector3.ClampMagnitude(rb.velocity, _maxSpeed);
           
         }
-
+        
         
     }
 
@@ -33,9 +35,25 @@ public class CharacterFlappyMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           // rb.AddForce(0, force, 0, fm);
             _fallSpeed *= -1;
             Physics.gravity = new Vector3(0, _fallSpeed, 0);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            Time.timeScale = 0;
+            GameManager.Instance.changeGameState(GameManager.GameState.GameOver);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 3)
+        {
+            GameManager.Instance.Highscore += 1;
         }
     }
 

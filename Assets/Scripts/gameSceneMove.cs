@@ -15,7 +15,8 @@ public class gameSceneMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(-_speed * Time.deltaTime, 0, 0));
+        if(GameManager.Instance.State != GameManager.GameState.GameOver)
+            transform.Translate(new Vector3(-_speed * Time.deltaTime, 0, 0));
     }
 
     private void Awake()

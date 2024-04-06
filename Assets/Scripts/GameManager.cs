@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameState State;
+    public int Highscore;
     public static event Action<GameState> OnGameStateChanged;
     
     void Awake()
