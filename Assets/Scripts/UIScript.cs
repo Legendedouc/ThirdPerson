@@ -6,16 +6,23 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 public class UIScript : MonoBehaviour
 {
-    private UIDocument _document;
+    private UIDocument _mainMenuUI, _ingameUIDocument;
     private Button _button;
+    private Label _highscore;
 
-    [SerializeField] private GameObject _menu, _camera;
+    [SerializeField] private GameObject _menu, _camera, _ingameUI;
     // Start is called before the first frame update
     void Awake()
     {
-        _document = GetComponent<UIDocument>();
-        _button = _document.rootVisualElement.Q("Start") as Button;
+        _mainMenuUI = _menu.GetComponent<UIDocument>();
+        _ingameUIDocument = _ingameUI.GetComponent<UIDocument>();
+        _button = _mainMenuUI.rootVisualElement.Q("Start") as Button;
         _button.RegisterCallback<ClickEvent>(StartGameClick);
+    }
+
+    private void Update()
+    {
+        _highscore = new Label(GameManager.Instance.Highscore + "");
     }
 
     private void OnDisable()
@@ -29,6 +36,5 @@ public class UIScript : MonoBehaviour
         
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
         GameManager.Instance.changeGameState(GameManager.GameState.Playing);
-
     }
 }
